@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/frete.css">
+    <link rel="shortcut icon" href="/assets/icon.svg" type="image/x-icon">
+    <title>Payment Page</title>
+</head>
+<body>
+    <div class="payment-container">
+        <div class="logomarca">
+            <img class="logo" src="/assets/logo2.svg" alt="logo">
+        </div>
+
+        <h4>Pague com PIX copiando o código ou escaneie o QRcode</h4>
+
+        <div class="frete_fixo">
+            <h3>FRETE FIXO PARA <br> <strong>TODO O BRASIL</strong></h3>
+            <p class="paragrafo">No valor de <strong>R$ 13,00</strong> </p>
+        </div>
+
+        <div id="qr-code">
+            <img class="qr" src="/assets/qr.jpeg" alt="QRcode">
+        </div>
+
+
+        <div class="code-box">
+            <p>Copia e cola: <span id="payment-code"></span> <button id="copy-button">Copiar</button></p>
+        </div>
+        
+        <p id="timer">Tempo restante: <span id="time"></span></p>
+
+        <div class="progresso">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="/js/frete.js"></script>
+</body>
+</html>

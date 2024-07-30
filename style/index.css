@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+html, body {
+    background-color: #0a0a0a;
+    padding: 0;
+    margin: 0;
+    display: block;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: black;
+}
+
+.content {
+    width: 90%;
+    color: #f1f1f1;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.menu-list a {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    color: #f1f1f1;
+    display: block;
+    padding: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-list :hover {
+    color: #daa520;
+    transition: color 0.7s ease;
+}
+
+.logo {
+    width: 8em;
+    margin-left: 1em;
+}
+
+/* Revela o menu em telas maiores */
+@media (min-width: 769px) {
+    .menu-list {
+        display: flex !important; /* Importante para sobrescrever as regras anteriores */
+        max-height: none;
+        opacity: 1;
+        overflow: visible;
+    }
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Esconde o menu em telas menores */
+@media (max-width: 768px) {
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        right: 0;
+        width: 100%;
+        background-color: black;
+    }
+
+    .menu-list.active {
+        max-height: 400px; /* Ajuste conforme o necessário */
+        opacity: 1;
+    }
+
+    .menu-list li {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .menu-list a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .menu-list a:hover {
+        background-color: #daa520;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    height: 3em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: #daa520;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+/*COMEÇA A INTRODUÇÃO*/
+.top {
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+
+.inicio {
+    color: #f1f1f1;
+    display: flex;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 60%; /* Ocupa toda a largura disponível */
+    margin-bottom: 3em;
+    align-items: center;
+}
+
+.title {
+    padding: 0 0.7em;
+    margin-top: 2em;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3em;
+}
+
+.intro {
+    padding: 0 2em;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    margin-bottom: 2em;
+}
+
+.destaque {
+    color: #daa520;
+}
+
+.btn {
+    background-image: linear-gradient(to left, #daa520 , #88681C);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%; /* Ocupa toda a largura disponível */
+    max-width: 18em; /* Largura máxima para evitar que o botão se estenda muito */
+    height: 3.5em;
+    margin-top: 3em;
+    border-radius: 3em;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Aumenta a escala em 10% */
+}
+
+.bton {
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #0a0a0a;
+    text-align: center; /* Centraliza o texto */
+}
+
+.box {
+    width: 80%; /* Ocupa toda a largura disponível */
+    max-width: 28em; /* Largura máxima para a imagem da caixa */
+    padding: 0 2em; /* Margens internas ajustadas para diferentes tamanhos de tela */
+    margin: auto;
+    margin-top: 5em;
+}
+
+/* Media queries para ajustar o layout em telas menores */
+@media (max-width: 760px) {
+    .inicio {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center;
+    }
+
+    .text {
+        width: 98%;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .navbar {
+        padding: 3px; /* Reduz o padding da barra de navegação em telas menores */
+    }
+
+    .menu-list {
+        top: 60px; /* Ajusta a posição do menu suspenso para evitar sobreposição com a barra de navegação */
+    }
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+    flex-wrap: wrap;
+}
+
+.images2 {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+    flex-wrap: wrap;
+}
+
+.img {
+    width: 3.5em;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img:hover {
+    transform: scale(1.2);
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .img {
+        width: 3rem; /* Reduz o tamanho das imagens em telas menores */
+    }
+
+    .box{
+        margin-top: 2em;
+    }
+}
+/*TERMINA A INTRODUÇÃO*/
+
+/*ABA DE PRODUTOS COMEÇA*/
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90%;
+}
+
+.text2 {
+    width: 90%;
+    padding: 0 2em;
+}
+
+.title2 {
+    color: #f1f1f1;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 1em; /* Gap between rows */
+}
+
+.row {
+    display: flex;
+    justify-content: center; /* Space out cards in a row */
+    gap: 4em;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 320px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.image-indicators {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #daa520;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: limegreen;
+    color: #f1f1f1;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 5px;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.card-title {
+    font-size: 1.8em;
+    margin: 0;
+    color: #333;
+}
+
+.card-description {
+    color: #777;
+    margin: 15px 0;
+    font-size: 1em;
+}
+
+.card-price {
+    margin: 15px 0;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: limegreen;
+    font-size: 1em;
+    display: block;
+}
+
+.discounted-price {
+    color: red;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.card-button {
+    background-color: limegreen;
+    color: #f1f1f1;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: green;
+}
+
+/*Começa o footer*/
+
+footer {
+    background-color: black;
+    color: #f1f1f1;
+    padding: 40px 0;
+    margin-top: auto;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    min-width: 250px;
+    padding: 15px;
+}
+
+.footer-logo {
+    max-width: 150px;
+}
+
+.footer-description {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 10px;
+}
+
+.footer-links a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #bc8f1c;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-bottom p {
+    margin: auto;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*Termina o footer*/

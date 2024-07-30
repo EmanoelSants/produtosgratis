@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/style/product.css">
+    <link rel="stylesheet" href="/style/global.css">
+    <title>Detalhes do Produto</title>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="content">
+            <img class="logo" src="/assets/logo.svg" alt="logo">
+            <ul class="menu-list" id="menu-list">
+                <li><a href="/index.html" target="_self">Home</a></li>
+                <li><a href="https://wa.me/82998067175" target="_blank">Suporte</a></li>
+            </ul>
+            <label class="hamburger" for="hamburger-input">
+                <input type="checkbox" id="hamburger-input" onclick="toggleMenu()">
+                <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                    <path class="line" d="M7 16 27 16"></path>
+                </svg>
+            </label>
+        </div>
+    </nav>
+
+    <div class="product-details">
+        <div class="product-images">
+            <div class="main-image">
+                <img src="/assets/acss2.PNG" alt="Product Image 1" class="product-image active">
+                <button class="slide-button prev">&#10094;</button>
+                <button class="slide-button next">&#10095;</button>
+            </div>
+            <div class="thumbnail-images">
+                <img src="/assets/acss.PNG" alt="Product Image 1" class="thumbnail-image active-thumbnail">
+                <img src="/assets/acss2.PNG" alt="Product Image 2" class="thumbnail-image">
+            </div>
+        </div>
+        <div class="product-info">
+
+            <div class="clock">
+                <div class="container">
+                    <h2 class="chamada">
+                        Restam apenas <span class="number">22</span> unidades
+                    </h2>
+
+                    <div class="progress-bar">
+                    <div id="progress"></div>
+                    </div>
+                    <h4 class="text-oferta">A oferta acaba em <span class="timer" id="timer"></span></h4>
+                </div>
+            </div>
+
+            <h2 class="product-title">Piercing minimalista feminio para orelha</h2>
+            <p class="product-description">Piercing para orelha com encaixe, não precisa de furo.</p>
+            <div class="product-price">
+                <span class="valor">Valor: R$ 0,00</span>
+                <span class="frete">Frete-fixo: <strong class="valor-frete">R$ 13,00</strong></span>
+            </div>
+            <div class="product-options">
+                <h3>Escolha a cor:</h3>
+                <div class="color-options">
+                    <button class="color-button" data-color="dourado" style="background-color: #daa520;"></button>
+                    <button class="color-button" data-color="prata" style="background-color: #c0c0c0;"></button>
+                </div>
+            </div>
+
+            <button class="redeem-button"><a href="/forms/formulario22.html" class="form">Resgatar Agora</a></button>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

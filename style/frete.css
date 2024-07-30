@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+.logomarca {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 10em;
+}
+
+h4 {
+    margin-top: 1em;
+    font: bold;
+    font-size: 1.2em;
+}
+
+.payment-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+
+.code-box {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qr {
+    width: 14em;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.paragrafo {
+    font-weight: 500;
+}
+
+.span {
+    font-weight: 600;
+}
+
+strong {
+    color: limegreen;
+}
+
+#copy-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #daa520;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#copy-button.copied {
+    background-color: #4caf50;
+}
+
+#qr-code {
+    margin: 5px;
+}
+
+#timer {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.progresso {
+    display: flex;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 80%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 10px;
+    background-color: #daa520;
+    width: 100%;
+    transition: width 1s linear;
+}

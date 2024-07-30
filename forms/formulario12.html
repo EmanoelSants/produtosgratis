@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Resgate</title>
+    <link rel="shortcut icon" href="/assets/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/style/formulario.css">
+</head>
+<body>
+  <div class="form-container">
+    <form id="productForm" action="https://formspree.io/f/xgvwwgga" method="POST">
+        <div style="display: flex; width: 100%; display: flex; justify-content: center; margin-bottom: 1em;">
+            <img src="/assets/logo.svg" alt="logo" style="width: 10em;">
+        </div>
+
+        <div class="form-group">
+
+            <input required name="name" id="name" type="text">
+            <label for="name">Nome completo</label>
+
+            <input required name="email" id="email" type="email">
+            <label for="email">Seu melhor Email</label>
+
+            <input required name="number" id="number" type="tel" pattern="[0-9]{10,11}">
+            <label for="number">Seu melhor número de celular</label>
+
+            <input required name="cpf" id="cpf" type="text" pattern="[0-9]{11}">
+            <label for="cpf">CPF</label>
+
+            <input required name="cep" id="cep" type="text" pattern="[0-9]{8}">
+            <label for="cep">CEP</label>
+
+            <input required name="street" id="street" type="text">
+            <label for="street">Rua/Avenida</label>
+
+            <input required name="numero" id="numero" type="text">
+            <label for="numero">Número</label>
+
+            <input name="complemento" id="complemento" type="text">
+            <label for="complemento">Complemento</label>
+
+            <input required name="city" id="city" type="text">
+            <label for="bairro">Bairro</label>
+
+            <input required name="city" id="city" type="text">
+            <label for="city">Cidade</label>
+
+            <input required name="state" id="state" type="text">
+            <label for="state">Estado</label>
+        </div>
+
+        <button type="submit" class="form-submit-btn" id="submitBtn">Enviar</button>
+    </form>
+</div>
+<script src="/js/main.js"></script>
+</body>
+</html>
